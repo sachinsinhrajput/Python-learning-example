@@ -12,7 +12,7 @@ else:
 while cap.isOpened():
     ret, frame = cap.read()
     if ret:
-        # Resize the frame to 640x480
+        # Resize the frame to 880x640
         resized_frame = cv2.resize(frame, (880, 640))
 
         # Show resized frame

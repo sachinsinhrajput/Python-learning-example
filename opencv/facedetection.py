@@ -21,8 +21,8 @@ def detect_eyes(img):
     return eye_img
 img = cv2.imread('/home/raoinfotech/vscode/python/opencv/man.jpg')
 img_copy1 = img.copy()
-img_copy2 = img.copy()
-img_copy3 = img.copy()
+
+
 
 face = adjusted_detect_face(img_copy1)
 plt.imshow(cv2.cvtColor(face, cv2.COLOR_BGR2RGB))
