@@ -16,7 +16,7 @@ while cap.isOpened():
         resized_frame = cv2.resize(frame, (880, 640))
 
         # Show resized frame
-        cv2.imshow("Video Frame", resized_frame)
+        cv2.imshow("", resized_frame)
 
         # Exit on 'q' key press
         if cv2.waitKey(1) & 0xFF == ord('q'):
