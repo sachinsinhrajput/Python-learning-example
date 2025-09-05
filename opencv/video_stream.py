@@ -21,7 +21,7 @@ while frame_no < frame_count:
         break
 
     # Save the frame
-    cv2.imwrite(f"/home/raoinfotech/Pictures/fire/frame32_{saved_no:04d}.jpg", frame)
+    cv2.imwrite(f"/home/raoinfotech/Pictures/fire/frame67_{saved_no:03d}.jpg", frame)
     saved_no += 1
 
     # Jump 30 seconds ahead

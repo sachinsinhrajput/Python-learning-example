@@ -28,7 +28,7 @@ face = adjusted_detect_face(img_copy1)
 plt.imshow(cv2.cvtColor(face, cv2.COLOR_BGR2RGB))
 
 cv2.imwrite('/home/raoinfotech/vscode/python/opencv/photo/face.jpg', face)
-eyes = detect_eyes(img_copy2)
+eyes = detect_eyes(img_copy1)
 plt.imshow(cv2.cvtColor(eyes, cv2.COLOR_BGR2RGB))
 
 cv2.imwrite('/home/raoinfotech/vscode/python/opencv/photo/eyes.jpg', eyes)
