@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import os
 
-def detect_fire(frame, frame_count, save_path="captured_fire"):
+def detect_fire(frame, frame_count, save_path="/home/raoinfotech/vscode/python/opencv/fire-ditection/captured_fire"):
     fire_img = frame.copy()
     hsv = cv2.cvtColor(fire_img, cv2.COLOR_BGR2HSV)
 
@@ -27,16 +27,16 @@ def detect_fire(frame, frame_count, save_path="captured_fire"):
     # Save frame if fire is detected
     if fire_detected:
         os.makedirs(save_path, exist_ok=True)
-        filename = os.path.join(save_path, f"/home/raoinfotech/vscode/python/opencv/fire-ditection/fire_frame_{frame_count}.jpg")
+        filename = os.path.join(save_path, f"fire_frame_{frame_count}.jpg")
         cv2.imwrite(filename, fire_img)
-        print(f"🔥 Fire captured: {filename}")
+        print(f"Fire captured: {filename}")
 
     return fire_img, mask
 # Load video
 cap = cv2.VideoCapture("/home/raoinfotech/vscode/python/opencv/fire-ditection/fire-video.mp4")
 
 if not cap.isOpened():
-    print("❌ Error: Could not open video file.")
+    print(" Error: Could not open video file.")
     exit()
 
 frame_width = 640
@@ -46,7 +46,7 @@ frame_count = 0
 while True:
     ret, frame = cap.read()
     if not ret:
-        print("⚠️ End of video or cannot read frame.")
+        print("End of video or cannot read frame.")
         break
 
     frame_count += 1
