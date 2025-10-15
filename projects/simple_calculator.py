@@ -15,4 +15,3 @@ elif operation == '/':
 else:
     result = "Invalid operation!"
 print("Result:", result)
-print("Thank you for playing!") 
